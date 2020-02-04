@@ -9,9 +9,8 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        login_url = self.url.split("/")[-2]
-        print(login_url)
-        assert login_url == "login", "not login url"
+        login_url = self.url.split("/")
+        assert "login" in login_url, "not login url"
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
