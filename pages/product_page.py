@@ -21,5 +21,4 @@ class ProductPage(BasePage):
         price = self.browser.find_element(*ProductPageLocators.PRICE).text
         priceInBasket = self.browser.find_element(
             *ProductPageLocators.PRICE_IN_BASKET).text
-        print(price, priceInBasket)
         assert price == priceInBasket, "difirent price in basket and page"
