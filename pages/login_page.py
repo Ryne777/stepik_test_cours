@@ -22,11 +22,8 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.RGISTOR_FORM)
 
     def register_new_user(self, email, password):
+        self.browser.find_element(*LoginPageLocators.EMAIL_REG).send_keys(email)
+        self.browser.find_element(*LoginPageLocators.PASSWORD_REG).send_keys(password)
         self.browser.find_element(
-            By.CSS_SELECTOR, "#id_registration-email").send_keys(email)
-        self.browser.find_element(
-            By.CSS_SELECTOR, "#id_registration-password1").send_keys(password)
-        self.browser.find_element(
-            By.CSS_SELECTOR, "#id_registration-password2").send_keys(password)
-        self.browser.find_element(
-            By.CSS_SELECTOR, 'button[value="Register"]').click()
+            *LoginPageLocators.PASSWORD_REG_CONFIRM).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.REG_BUTTON).click()
