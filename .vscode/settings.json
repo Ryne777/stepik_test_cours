@@ -1,3 +1,12 @@
 {
-    "python.pythonPath": "venv\\Scripts\\python.exe"
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.jediEnabled": false,
+    "python.testing.pytestArgs": ["-v", "--tb=line"],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "cSpell.language": "en,ru"
+    // "python.terminal.activateEnvInCurrentTerminal": true
 }

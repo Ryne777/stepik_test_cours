@@ -15,13 +15,13 @@ class ProductPage(BasePage):
 
     def should_be_product_in_basket(self):
         assert self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_BASKET).text == self.browser.find_element(
-            *ProductPageLocators.PRODUCT_NAME).text, "difirent product in basket and page"
+            *ProductPageLocators.PRODUCT_NAME).text, "different product in basket and page"
 
     def should_be_price_in_basket(self):
         price = self.browser.find_element(*ProductPageLocators.PRICE).text
         priceInBasket = self.browser.find_element(
             *ProductPageLocators.PRICE_IN_BASKET).text
-        assert price == priceInBasket, "difirent price in basket and page"
+        assert price == priceInBasket, "different price in basket and page"
 
 
     def should_not_be_success_message(self):
